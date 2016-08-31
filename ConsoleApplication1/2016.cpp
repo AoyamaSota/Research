@@ -1,3 +1,6 @@
+
+//テストです．
+
 #include<time.h>
 #include <iostream>
 #include<stdio.h>
