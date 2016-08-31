@@ -1,0 +1,68 @@
+﻿2016/05/02 19:58:57 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\宗太\Desktop\研究\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files (x86)\Point Grey Research\FlyCapture2\include" /IC:\opencv\build\include /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt kalman.cpp
+         kalman.cpp
+     1>C:\Program Files (x86)\Point Grey Research\FlyCapture2\include\FC1\PGRFlyCapture.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+     1>kalman.cpp(91): warning C4244: '初期化中' : 'int' から 'float' への変換です。データが失われる可能性があります。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\宗太\Desktop\研究\x64\Debug\ConsoleApplication1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Point Grey Research\FlyCapture2\lib\FC1" /LIBPATH:"C:\freeglut-3.0.0\build\lib" /LIBPATH:C:\opencv\build\x86\vc12\lib PGRFlyCapture.lib PGRFlyCaptureGUI.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\宗太\Desktop\研究\x64\Debug\ConsoleApplication1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\宗太\Desktop\研究\x64\Debug\ConsoleApplication1.lib" /MACHINE:X64 x64\Debug\kalman.obj
+         x64\Debug\PointGrayCamera.obj
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル cvSetIdentity が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル cvCircle が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル "void __cdecl cv::fastFree(void *)" (?fastFree@cv@@YAXPEAX@Z) が関数 "public: __cdecl cv::Mat::~Mat(void)" (??1Mat@cv@@QEAA@XZ) で参照されました。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""void __cdecl cv::fastFree(void *)" (?fastFree@cv@@YAXPEAX@Z)" は未解決です。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル "public: __cdecl cv::_InputArray::_InputArray(class cv::Mat const &)" (??0_InputArray@cv@@QEAA@AEBVMat@1@@Z) が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル "public: __cdecl cv::_OutputArray::_OutputArray(class cv::Mat &)" (??0_OutputArray@cv@@QEAA@AEAVMat@1@@Z) が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル "public: void __cdecl cv::Mat::deallocate(void)" (?deallocate@Mat@cv@@QEAAXXZ) が関数 "public: void __cdecl cv::Mat::release(void)" (?release@Mat@cv@@QEAAXXZ) で参照されました。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: void __cdecl cv::Mat::deallocate(void)" (?deallocate@Mat@cv@@QEAAXXZ)" は未解決です。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル "public: void __cdecl cv::Mat::copySize(class cv::Mat const &)" (?copySize@Mat@cv@@QEAAXAEBV12@@Z) が関数 "public: class cv::Mat & __cdecl cv::Mat::operator=(class cv::Mat const &)" (??4Mat@cv@@QEAAAEAV01@AEBV01@@Z) で参照されました。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: void __cdecl cv::Mat::copySize(class cv::Mat const &)" (?copySize@Mat@cv@@QEAAXAEBV12@@Z)" は未解決です。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル "int __cdecl cv::_interlockedExchangeAdd(int *,int)" (?_interlockedExchangeAdd@cv@@YAHPEAHH@Z) が関数 "public: class cv::Mat & __cdecl cv::Mat::operator=(class cv::Mat const &)" (??4Mat@cv@@QEAAAEAV01@AEBV01@@Z) で参照されました。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""int __cdecl cv::_interlockedExchangeAdd(int *,int)" (?_interlockedExchangeAdd@cv@@YAHPEAHH@Z)" は未解決です。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル cvMoments が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル "double __cdecl cv::threshold(class cv::_InputArray const &,class cv::_OutputArray const &,double,double,int)" (?threshold@cv@@YANAEBV_InputArray@1@AEBV_OutputArray@1@NNH@Z) が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル "void __cdecl cv::cvtColor(class cv::_InputArray const &,class cv::_OutputArray const &,int,int)" (?cvtColor@cv@@YAXAEBV_InputArray@1@AEBV_OutputArray@1@HH@Z) が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル cvCreateKalman が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル cvReleaseKalman が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル cvKalmanPredict が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル cvKalmanCorrect が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル cvNamedWindow が関数 "void __cdecl init(void)" (?init@@YAXXZ) で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル cvShowImage が関数 main で参照されました。
+     1>kalman.obj : error LNK2019: 未解決の外部シンボル cvResizeWindow が関数 "void __cdecl init(void)" (?init@@YAXXZ) で参照されました。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual class cv::Mat __cdecl cv::_InputArray::getMat(int)const " (?getMat@_InputArray@cv@@UEBA?AVMat@2@H@Z)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual void __cdecl cv::_InputArray::getMatVector(class std::vector<class cv::Mat,class std::allocator<class cv::Mat> > &)const " (?getMatVector@_InputArray@cv@@UEBAXAEAV?$vector@VMat@cv@@V?$allocator@VMat@cv@@@std@@@std@@@Z)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual class cv::GlBuffer __cdecl cv::_InputArray::getGlBuffer(void)const " (?getGlBuffer@_InputArray@cv@@UEBA?AVGlBuffer@2@XZ)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual class cv::GlTexture __cdecl cv::_InputArray::getGlTexture(void)const " (?getGlTexture@_InputArray@cv@@UEBA?AVGlTexture@2@XZ)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual class cv::gpu::GpuMat __cdecl cv::_InputArray::getGpuMat(void)const " (?getGpuMat@_InputArray@cv@@UEBA?AVGpuMat@gpu@2@XZ)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual int __cdecl cv::_InputArray::kind(void)const " (?kind@_InputArray@cv@@UEBAHXZ)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual class cv::Size_<int> __cdecl cv::_InputArray::size(int)const " (?size@_InputArray@cv@@UEBA?AV?$Size_@H@2@H@Z)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual unsigned __int64 __cdecl cv::_InputArray::total(int)const " (?total@_InputArray@cv@@UEBA_KH@Z)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual int __cdecl cv::_InputArray::type(int)const " (?type@_InputArray@cv@@UEBAHH@Z)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual int __cdecl cv::_InputArray::depth(int)const " (?depth@_InputArray@cv@@UEBAHH@Z)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual int __cdecl cv::_InputArray::channels(int)const " (?channels@_InputArray@cv@@UEBAHH@Z)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual bool __cdecl cv::_InputArray::empty(void)const " (?empty@_InputArray@cv@@UEBA_NXZ)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual bool __cdecl cv::_OutputArray::fixedSize(void)const " (?fixedSize@_OutputArray@cv@@UEBA_NXZ)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual bool __cdecl cv::_OutputArray::fixedType(void)const " (?fixedType@_OutputArray@cv@@UEBA_NXZ)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual bool __cdecl cv::_OutputArray::needed(void)const " (?needed@_OutputArray@cv@@UEBA_NXZ)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual class cv::Mat & __cdecl cv::_OutputArray::getMatRef(int)const " (?getMatRef@_OutputArray@cv@@UEBAAEAVMat@2@H@Z)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual void __cdecl cv::_OutputArray::create(class cv::Size_<int>,int,int,bool,int)const " (?create@_OutputArray@cv@@UEBAXV?$Size_@H@2@HH_NH@Z)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual void __cdecl cv::_OutputArray::create(int,int,int,int,bool,int)const " (?create@_OutputArray@cv@@UEBAXHHHH_NH@Z)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual void __cdecl cv::_OutputArray::create(int,int const *,int,int,bool,int)const " (?create@_OutputArray@cv@@UEBAXHPEBHHH_NH@Z)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual void __cdecl cv::_OutputArray::release(void)const " (?release@_OutputArray@cv@@UEBAXXZ)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2001: 外部シンボル ""public: virtual void __cdecl cv::_OutputArray::clear(void)const " (?clear@_OutputArray@cv@@UEBAXXZ)" は未解決です。
+     1>PointGrayCamera.obj : error LNK2019: 未解決の外部シンボル "public: void __cdecl cv::Mat::copyTo(class cv::_OutputArray const &)const " (?copyTo@Mat@cv@@QEBAXAEBV_OutputArray@2@@Z) が関数 "public: int __cdecl PointGrayCamera::Capture(void)" (?Capture@PointGrayCamera@@QEAAHXZ) で参照されました。
+     1>PointGrayCamera.obj : error LNK2019: 未解決の外部シンボル "public: void __cdecl cv::Mat::create(int,int const *,int)" (?create@Mat@cv@@QEAAXHPEBHH@Z) が関数 "public: void __cdecl cv::Mat::create(int,int,int)" (?create@Mat@cv@@QEAAXHHH@Z) で参照されました。
+     1>PointGrayCamera.obj : error LNK2019: 未解決の外部シンボル __imp_flycaptureCreateContext が関数 "public: int __cdecl PointGrayCamera::initServerCamera(void)" (?initServerCamera@PointGrayCamera@@QEAAHXZ) で参照されました。
+     1>PointGrayCamera.obj : error LNK2019: 未解決の外部シンボル __imp_flycaptureDestroyContext が関数 "public: int __cdecl PointGrayCamera::dst(void)" (?dst@PointGrayCamera@@QEAAHXZ) で参照されました。
+     1>PointGrayCamera.obj : error LNK2019: 未解決の外部シンボル __imp_flycaptureInitializeFromSerialNumber が関数 "public: int __cdecl PointGrayCamera::initServerCamera(void)" (?initServerCamera@PointGrayCamera@@QEAAHXZ) で参照されました。
+     1>PointGrayCamera.obj : error LNK2019: 未解決の外部シンボル __imp_flycaptureStart が関数 "public: int __cdecl PointGrayCamera::initServerCamera(void)" (?initServerCamera@PointGrayCamera@@QEAAHXZ) で参照されました。
+     1>PointGrayCamera.obj : error LNK2019: 未解決の外部シンボル __imp_flycaptureStop が関数 "public: int __cdecl PointGrayCamera::dst(void)" (?dst@PointGrayCamera@@QEAAHXZ) で参照されました。
+     1>PointGrayCamera.obj : error LNK2019: 未解決の外部シンボル __imp_flycaptureGrabImage2 が関数 "public: int __cdecl PointGrayCamera::initServerCamera(void)" (?initServerCamera@PointGrayCamera@@QEAAHXZ) で参照されました。
+     1>PointGrayCamera.obj : error LNK2019: 未解決の外部シンボル __imp_flycaptureConvertImage が関数 "public: int __cdecl PointGrayCamera::Capture(void)" (?Capture@PointGrayCamera@@QEAAHXZ) で参照されました。
+     1>C:\Users\宗太\Desktop\研究\x64\Debug\ConsoleApplication1.exe : fatal error LNK1120: 48 件の未解決の外部参照
+     1>プロジェクト "C:\Users\宗太\Desktop\研究\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
+
+ビルドに失敗しました。
+
+経過時間 00:00:02.68

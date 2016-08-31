@@ -1,0 +1,16 @@
+﻿2016/05/02 19:55:41 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\宗太\Desktop\研究\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Point Grey Research\FlyCapture2\include" /IC:\opencv\build\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt kalman.cpp
+         kalman.cpp
+     1>c:\program files (x86)\point grey research\flycapture2\include\fc1\pgrflycapture.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+     1>c:\users\宗太\desktop\研究\consoleapplication1\kalman.cpp(90): warning C4244: '初期化中' : 'int' から 'float' への変換です。データが失われる可能性があります。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\宗太\Desktop\研究\Debug\ConsoleApplication1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Point Grey Research\FlyCapture2\lib\FC1" /LIBPATH:"C:\freeglut-3.0.0\build\lib" /LIBPATH:C:\opencv\build\x86\vc12\lib PGRFlyCapture.lib PGRFlyCaptureGUI.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\宗太\Desktop\研究\Debug\ConsoleApplication1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\宗太\Desktop\研究\Debug\ConsoleApplication1.lib" /MACHINE:X86 Debug\kalman.obj
+         Debug\PointGrayCamera.obj
+         ConsoleApplication1.vcxproj -> C:\Users\宗太\Desktop\研究\Debug\ConsoleApplication1.exe
+     1>プロジェクト "C:\Users\宗太\Desktop\研究\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:02.20

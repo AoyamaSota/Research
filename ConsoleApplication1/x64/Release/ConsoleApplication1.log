@@ -1,0 +1,13 @@
+﻿2016/08/22 20:13:35 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\宗太\Desktop\研究\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット)。
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\宗太\Desktop\研究\x64\Release\ConsoleApplication1.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files\Point Grey Research\FlyCapture2\lib64\FC1" /LIBPATH:C:\opencv\build\x64\vc12\lib /LIBPATH:"C:\Users\宗太\Desktop\freeglut-3.0.0\build\lib\Release" PGRFlyCapture.lib PGRFlyCaptureGUI.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\宗太\Desktop\研究\x64\Release\ConsoleApplication1.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\宗太\Desktop\研究\x64\Release\ConsoleApplication1.lib" /MACHINE:X64 x64\Release\PointGrayCamera.obj
+         x64\Release\test1.obj
+         コード生成しています。
+         コード生成が終了しました。
+         ConsoleApplication1.vcxproj -> C:\Users\宗太\Desktop\研究\x64\Release\ConsoleApplication1.exe
+     1>プロジェクト "C:\Users\宗太\Desktop\研究\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:00.96

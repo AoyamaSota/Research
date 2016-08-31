@@ -1,0 +1,17 @@
+﻿2015/10/20 13:49:22 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\宗太\Desktop\研究\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Point Grey Research\FlyCapture2\include" /IC:\opencv\build\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt test1.cpp
+         test1.cpp
+     1>C:\Program Files (x86)\Point Grey Research\FlyCapture2\include\FC1\PGRFlyCapture.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\宗太\Desktop\研究\Release\ConsoleApplication1.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files (x86)\Point Grey Research\FlyCapture2\lib\FC1" /LIBPATH:C:\opencv\build\x86\vc12\lib PGRFlyCapture.lib PGRFlyCaptureGUI.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\宗太\Desktop\研究\Release\ConsoleApplication1.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\宗太\Desktop\研究\Release\ConsoleApplication1.lib" /MACHINE:X86 /SAFESEH Release\PointGrayCamera.obj
+         Release\test1.obj
+         コード生成しています。
+         コード生成が終了しました。
+         ConsoleApplication1.vcxproj -> C:\Users\宗太\Desktop\研究\Release\ConsoleApplication1.exe
+     1>プロジェクト "C:\Users\宗太\Desktop\研究\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:03.03
