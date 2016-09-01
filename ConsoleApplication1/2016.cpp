@@ -1,5 +1,5 @@
 
-//テストです．
+//テストです．実験室
 
 #include<time.h>
 #include <iostream>
