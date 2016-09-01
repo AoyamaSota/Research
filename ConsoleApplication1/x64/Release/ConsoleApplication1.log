@@ -1,13 +1,26 @@
-﻿2016/08/22 20:13:35 にビルドを開始しました。
-     1>ノード 2 上のプロジェクト "C:\Users\宗太\Desktop\研究\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット)。
-     1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\宗太\Desktop\研究\x64\Release\ConsoleApplication1.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files\Point Grey Research\FlyCapture2\lib64\FC1" /LIBPATH:C:\opencv\build\x64\vc12\lib /LIBPATH:"C:\Users\宗太\Desktop\freeglut-3.0.0\build\lib\Release" PGRFlyCapture.lib PGRFlyCaptureGUI.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\宗太\Desktop\研究\x64\Release\ConsoleApplication1.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\宗太\Desktop\研究\x64\Release\ConsoleApplication1.lib" /MACHINE:X64 x64\Release\PointGrayCamera.obj
+﻿2016/09/01 19:53:59 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\宗太\Desktop\Research\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\Point Grey Research\FlyCapture2\include" /IC:\opencv\build\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt PointGrayCamera.cpp
+         PointGrayCamera.cpp
+     1>C:\Program Files\Point Grey Research\FlyCapture2\include\FC1\PGRFlyCapture.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\Point Grey Research\FlyCapture2\include" /IC:\opencv\build\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt test1.cpp
+         test1.cpp
+     1>C:\Program Files\Point Grey Research\FlyCapture2\include\FC1\PGRFlyCapture.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+     1>test1.cpp(14): warning C4005: 'WIDTH' : マクロが再定義されました。
+                 test1.cpp(11) : 'WIDTH' の前の定義を確認してください
+     1>test1.cpp(15): warning C4005: 'HEIGHT' : マクロが再定義されました。
+                 test1.cpp(12) : 'HEIGHT' の前の定義を確認してください
+     1>test1.cpp(386): warning C4244: '-=' : 'double' から 'int' への変換です。データが失われる可能性があります。
+     1>test1.cpp(393): warning C4244: '+=' : 'double' から 'int' への変換です。データが失われる可能性があります。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\宗太\Desktop\Research\x64\Release\ConsoleApplication1.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files\Point Grey Research\FlyCapture2\lib64\FC1" /LIBPATH:C:\opencv\build\x64\vc12\lib /LIBPATH:"C:\Users\宗太\Desktop\freeglut-3.0.0\build\lib\Release" PGRFlyCapture.lib PGRFlyCaptureGUI.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\宗太\Desktop\Research\x64\Release\ConsoleApplication1.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\宗太\Desktop\Research\x64\Release\ConsoleApplication1.lib" /MACHINE:X64 x64\Release\PointGrayCamera.obj
          x64\Release\test1.obj
          コード生成しています。
          コード生成が終了しました。
-         ConsoleApplication1.vcxproj -> C:\Users\宗太\Desktop\研究\x64\Release\ConsoleApplication1.exe
-     1>プロジェクト "C:\Users\宗太\Desktop\研究\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット) のビルドが完了しました。
+         ConsoleApplication1.vcxproj -> C:\Users\宗太\Desktop\Research\x64\Release\ConsoleApplication1.exe
+     1>プロジェクト "C:\Users\宗太\Desktop\Research\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:00.96
+経過時間 00:00:05.50
