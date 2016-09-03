@@ -4,45 +4,44 @@
 #include<stdlib.h>
 #include <windows.h>
 #include <opencv2/opencv.hpp>
+#include <GL/glut.h>
 #include "cv.h"
 #include "PointGrayCamera.h"
-#include <GL/glut.h>
 #include"Header.h"
 
 
 #pragma warning(disable:4996)
-#define WIDTH 1280
-#define HEIGHT 960
 
 #define WIDTH 640
 #define HEIGHT 480
 
-
+cv::Mat Big;
 int main(int argc, char* argv[])
 {
+
+	//重心座標の配列初期化
 	center.push_back(cv::Point2d(0, 0));
 	center.push_back(cv::Point2d(0, 0));
+
 	for (int ii = 0; ii < 7; ii++)
 		tnkpoint.push_back(cv::Point2d(0, 0));
 
+	Big = cv::Mat::zeros(HEIGHT+100, WIDTH, CV_8UC1);
 	tmpmat = cv::Mat::zeros(HEIGHT + 100, WIDTH, CV_8UC1);
 	cv::Rect rect(cv::Point(0, 100), cv::Point(WIDTH, HEIGHT + 100));
 	tmpmat2 = tmpmat(rect);
-
+	//Big = tmpmat(rect);
 	init();
 
 
 	// GLUT の初期化
 	glutInit(&argc, argv);
 
-	glutInitWindowSize(640, 480);
+	glutInitWindowSize(WIDTH, HEIGHT);
 	glutInitWindowPosition(1600, 30);
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
 	glutCreateWindow("Projection");
-	//if (flag != 1){
-	//	flag = 1;
-	//	startTime = GetTickCount();
-	//}
+	
 	glutDisplayFunc(display);
 	glutKeyboardFunc(keyboard);
 	glutReshapeFunc(resize);
@@ -65,7 +64,7 @@ static void glInit(void)
 	// テクスチャメモリの確保
 	glGenTextures(1, &texname);
 	glBindTexture(GL_TEXTURE_2D, texname);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 640, 480, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, WIDTH, HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 
@@ -82,7 +81,7 @@ static void idle(void)
 {
 	glutPostRedisplay();
 }
-int sel = 1;
+
 
 void init(void)
 {
@@ -114,7 +113,6 @@ void init(void)
 
 
 	CvMat src_point;
-	//double cam[] = { 380,292, 350,155, 540,117, 568,254 };
 	src_point = cvMat(NUM_POINTS, 2, CV_64FC1, cam);
 
 	// プロジェクター画像での座標
@@ -148,29 +146,17 @@ void init(void)
 	h_tmp[15] = homo(2, 2);
 
 
-
+	//画像の中心座標　初期化
 	img_center.x = WIDTH / 2;
 	img_center.y = HEIGHT / 2;
 
 
-	//cv::Mat
-	//	int sel=3;
-
-	//printf("pattern is 1 or 2 ");
-	//scanf("%d", &sel);
+	
 	background = cv::imread("base2.jpg", 1);
 	if (background.empty()) return;
-
-	if (sel == 1){
-		pattern = cv::imread("sampleDot.jpg", 1);
-		//	pattern = cv::imread("dp.jpg", 1);
-		if (pattern.empty()) return;
-	}
-
-	else if (sel == 3){
-		pattern = cv::imread("base2.jpg", 1);
-		if (pattern.empty()) return;
-	}
+	
+	pattern = cv::imread("sampleDot.jpg", 1);
+	if (pattern.empty()) return;
 
 	printf("condition is 1 or 2 or 3 ");
 	scanf("%d", &condition);
@@ -185,13 +171,7 @@ static void getTexture(void){
 
 	camera.Capture();
 
-
-	//	cv::imwrite("samp.jpg", camera.cv_image);
-
-
-	////////////////////////////////二値化
-
-
+	//グレースケールからの二値化
 
 	cvtColor(camera.cv_image, gray_img, CV_RGB2GRAY);
 
@@ -199,62 +179,57 @@ static void getTexture(void){
 		return;
 	}
 
-
-	//flag = 0;
-
-	// 固定の閾値処理(大津の二値化)
-	// 入力画像，出力画像，閾値，maxVa@l，閾値処理手法
-	//	cv::threshold(gray_img, bin_img, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
-	//	cv::imshow("aaaaaaaa", bin_img);
-
 	cv::threshold(gray_img, bin_img, 130, 255, cv::THRESH_BINARY);
-	//	cv::imwrite("binary.jpg", bin_img);
-	cv::imshow("aaaaaaaa", bin_img);
+	//cv::imshow("Binary", bin_img);
 
+	//収縮処理 (ドットが端に投影されないように)
 	cv::erode(bin_img, bin_img, cv::Mat(), cv::Point(-1, -1), 1);
-
-	//二値化画像の重心
-	cv::medianBlur(bin_img, bin_img, 3);	//メディアンフィルタ
-	//	std::cout << center << std::endl;
+	//cv::imshow("Erode", bin_img);
 
 
+	//メディアンフィルタ (ノイズ除去)
+	cv::medianBlur(bin_img, bin_img, 3);
+	//cv::imshow("Median", bin_img);
+
+	//二値画像の重心を求める		
 	moment = cv::moments(bin_img, 0);
 	double m00 = cvGetSpatialMoment(&moment, 0, 0);
 	double m10 = cvGetSpatialMoment(&moment, 1, 0);
 	double m01 = cvGetSpatialMoment(&moment, 0, 1);
 
-
 	if (m10 == 0 && m01 == 0)
 		return;
 
 	center.erase(center.begin());
+	center.push_back(cv::Point2d((m10 / m00), m01 / m00));
 
-	center.push_back(cv::Point2d(WIDTH - (m10 / m00/*+i*/), HEIGHT - m01 / m00));
-
+	//線形補間
 	tnkpoint.erase(tnkpoint.begin());
-	tnkpoint.push_back((center[1] - center[0]) * 3); //線形補間
+
+	tnkpoint.push_back((center[1] - center[0]) * 3); //差分の計算と定数倍
 
 
+	//平滑化
 	cv::Point2d tmppoint(0, 0);
 
 	for (int ii = 0; ii < tnkpoint.size(); ii++)
 		tmppoint += tnkpoint[ii];
 	tmppoint.x /= (double)tnkpoint.size();
-	tmppoint.y = tmppoint.y / (double)tnkpoint.size() + 100;
+	tmppoint.y = tmppoint.y / (double)tnkpoint.size();
 
+//	cv::circle(bin_img, tmppoint+center[1], 5, CV_RGB(0, 200, 200));
+	//cv::imshow("tnk", bin_img);
 
-	//	std::cout << center << std::endl;
-
-	//	std::cout << new_center + tmppoint << std::endl;
-
-
+	cv::circle(Big, tmppoint + center[1], 5, CV_RGB(0, 200, 200));
+	cv::imshow("Circle", Big);
+	
 	bin_img.copyTo(tmpmat2);
 
 
 
 
 	//手の画像をシフト
-	cv::getRectSubPix(tmpmat, patch, img_center + tmppoint, bin_img, cv::BORDER_CONSTANT);
+	cv::getRectSubPix(tmpmat2, patch, img_center + tmppoint, bin_img, cv::BORDER_CONSTANT);
 	//	cv::imshow("tetete", bin_img);
 	//center[1].x += i;
 	//	tmppoint.x -= i;
@@ -305,9 +280,7 @@ static void getTexture(void){
 	// マスク処理
 	projection.copyTo(bin_img, bin_img);
 
-	//cv::imwrite("masked.jpg", bin_img);
-	//		src_img.copyTo(bin_img, bin_img);
-	//	cv::medianBlur(bin_img, bin_img, 3);	//メディアンフィルタ	
+
 
 
 	cv::flip(bin_img, bin_img, 0);
@@ -320,17 +293,22 @@ static void getTexture(void){
 
 
 
-	//	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, bin_img.cols, bin_img.rows, 0, GL_RGB, GL_UNSIGNED_BYTE, bin_img.data);
 
 
 	//テクスチャの作成
 
-	for (int y = 0; y < bin_img.size().height; ++y)
-	{
-		glTexSubImage2D(GL_TEXTURE_2D, 0, 0, y, bin_img.size().width, 1, GL_RGB,
-			GL_UNSIGNED_BYTE, bin_img.data + bin_img.step * y);
-	}
+	//for (int y = 0; y < bin_img.size().height; ++y)
+	//{
+	//	glTexSubImage2D(GL_TEXTURE_2D, 0, 0, y, bin_img.size().width, 1, GL_RGB,
+	//		GL_UNSIGNED_BYTE, bin_img.data + bin_img.step * y);
+	//}
 
+	cv::flip(Big, Big, 0);
+	for (int y = 0; y < Big.size().height; ++y)
+	{
+		glTexSubImage2D(GL_TEXTURE_2D, 0, 0, y, Big.size().width, 1, GL_RGB,
+			GL_UNSIGNED_BYTE, Big.data + Big.step * y);
+	}
 
 
 	return;
@@ -382,9 +360,6 @@ static void display(void)
 	//ダブルバッファリング
 	glutSwapBuffers();
 
-
-
-
 }
 
 
@@ -401,13 +376,6 @@ static void resize(int w, int h)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glMultMatrixd(h_tmp);
-
-	/* 変換行列の初期化 */
-	//glLoadIdentity();
-
-	//glOrtho(-0.5, (GLdouble)w - 0.5, (GLdouble)h - 0.5, -0.5, -1.0, 1.0);
-
-	//glViewport(0, 0, w, h);
 
 }
 
@@ -447,10 +415,6 @@ static void keyboard(unsigned char key, int x, int y)
 		condition = 3;
 		break;
 
-		//case 'P':
-		//	pattern = cv::imread("sampleDot.jpg", 1);
-		//	if (pattern.empty()) return;
-		//	break;
 
 	default:
 		break;
