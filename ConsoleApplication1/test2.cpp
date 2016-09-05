@@ -15,6 +15,8 @@
 #define WIDTH 640
 #define HEIGHT 480
 
+using namespace std;
+
 cv::Mat Big;
 int main(int argc, char* argv[])
 {
@@ -26,7 +28,8 @@ int main(int argc, char* argv[])
 	for (int ii = 0; ii < 7; ii++)
 		tnkpoint.push_back(cv::Point2d(0, 0));
 
-	Big = cv::Mat::zeros(HEIGHT+100, WIDTH, CV_8UC1);
+	Big = cv::Mat::zeros(HEIGHT, WIDTH, CV_8UC3);
+
 	tmpmat = cv::Mat::zeros(HEIGHT + 100, WIDTH, CV_8UC1);
 	cv::Rect rect(cv::Point(0, 100), cv::Point(WIDTH, HEIGHT + 100));
 	tmpmat2 = tmpmat(rect);
@@ -85,9 +88,6 @@ static void idle(void)
 
 void init(void)
 {
-
-
-
 	camera.initServerCamera();
 
 	//ホモグラフィ行列の算出
@@ -169,6 +169,7 @@ void init(void)
 
 static void getTexture(void){
 
+	Big = cv::Mat::zeros(HEIGHT, WIDTH, CV_8UC3);
 	camera.Capture();
 
 	//グレースケールからの二値化
@@ -180,7 +181,7 @@ static void getTexture(void){
 	}
 
 	cv::threshold(gray_img, bin_img, 130, 255, cv::THRESH_BINARY);
-	//cv::imshow("Binary", bin_img);
+	cv::imshow("Binary", bin_img);
 
 	//収縮処理 (ドットが端に投影されないように)
 	cv::erode(bin_img, bin_img, cv::Mat(), cv::Point(-1, -1), 1);
@@ -217,98 +218,97 @@ static void getTexture(void){
 	tmppoint.x /= (double)tnkpoint.size();
 	tmppoint.y = tmppoint.y / (double)tnkpoint.size();
 
-//	cv::circle(bin_img, tmppoint+center[1], 5, CV_RGB(0, 200, 200));
+    //cv::circle(bin_img, tmppoint+center[1], 5, CV_RGB(0, 200, 200));
 	//cv::imshow("tnk", bin_img);
 
-	cv::circle(Big, tmppoint + center[1], 5, CV_RGB(0, 200, 200));
-	cv::imshow("Circle", Big);
+	cv::circle(Big, tmppoint + center[1], 20, CV_RGB(255, 255, 255), -1);
+	cv::circle(bin_img, center[1], 20, CV_RGB(255, 255, 255), -1);
+
 	
+	//cout << Big.size() << endl;
 	bin_img.copyTo(tmpmat2);
 
 
 
 
 	//手の画像をシフト
-	cv::getRectSubPix(tmpmat2, patch, img_center + tmppoint, bin_img, cv::BORDER_CONSTANT);
-	//	cv::imshow("tetete", bin_img);
-	//center[1].x += i;
-	//	tmppoint.x -= i;
-	tmppoint.y += i;
-	cv::getRectSubPix(src_img, patch, center[1] + tmppoint, projection, cv::BORDER_CONSTANT);
-
-
-
-	//if (center)
-	//	std::cout << center[1].x << std::endl;
-
-	if ((center[1].x - center[0].x) > 1 && center[1].x > 380 && center[1].x < 390){
-		std::cout << center[1].x - center[0].x << std::endl;
-		v.push_back(center[1].x - center[0].x);		//手の速度の保存　pix/frame
-	}
-
-
-	if (fps % 2 == 0){
-		switch (condition){
-
-		case 1:
-			break;
-
-		case 2:
-			if ((center[1].x - center[0].x) > 1 && center[1].x > 380)
-				i += 3;
-
-			else if ((center[1].x - center[0].x) < -1)
-				i -= 1.5;
-			break;
-
-		case 3:
-			if ((center[1].x - center[0].x) > 1 && center[1].x>380)
-				i -= 3;
-			else if ((center[1].x - center[0].x) < -1)
-				i += 1.5;
-			//	pattern = cv::imread("sample.bmp", 1);
-			break;
-		}
-	}
-
-
-	fps++;
-	//	
-
-
-
-	// マスク処理
-	projection.copyTo(bin_img, bin_img);
-
-
-
-
-	cv::flip(bin_img, bin_img, 0);
-	//	cv::flip(projection, projection, 0);
-
-	//	cv::imshow("aaaaaaaa", bin_img);
+//	cv::getRectSubPix(tmpmat2, patch, img_center + tmppoint, bin_img, cv::BORDER_CONSTANT);
+//	//	cv::imshow("tetete", bin_img);
+//	//center[1].x += i;
+//	//	tmppoint.x -= i;
+//	tmppoint.y += i;
+//	cv::getRectSubPix(src_img, patch, center[1] + tmppoint, projection, cv::BORDER_CONSTANT);
+//
+//
+//
+//	//if (center)
+//	//	std::cout << center[1].x << std::endl;
+//
+//	if ((center[1].x - center[0].x) > 1 && center[1].x > 380 && center[1].x < 390){
+////		std::cout << center[1].x - center[0].x << std::endl;
+//		v.push_back(center[1].x - center[0].x);		//手の速度の保存　pix/frame
+//	}
+//
+//
+//	if (fps % 2 == 0){
+//		switch (condition){
+//
+//		case 1:
+//			break;
+//
+//		case 2:
+//			if ((center[1].x - center[0].x) > 1 && center[1].x > 380)
+//				i += 3;
+//
+//			else if ((center[1].x - center[0].x) < -1)
+//				i -= 1.5;
+//			break;
+//
+//		case 3:
+//			if ((center[1].x - center[0].x) > 1 && center[1].x>380)
+//				i -= 3;
+//			else if ((center[1].x - center[0].x) < -1)
+//				i += 1.5;
+//			//	pattern = cv::imread("sample.bmp", 1);
+//			break;
+//		}
+//	}
+//
+//
+//	fps++;
+//	//	
+//
+//
+//
+//	// マスク処理
+//	projection.copyTo(bin_img, bin_img);
+//
+//
+//
+//
+//	cv::flip(bin_img, bin_img, 0);
+	
 	/******* テクスチャ更新 *******/
 
 	glBindTexture(GL_TEXTURE_2D, texname);
 
 
 
-
-
 	//テクスチャの作成
 
-	//for (int y = 0; y < bin_img.size().height; ++y)
-	//{
-	//	glTexSubImage2D(GL_TEXTURE_2D, 0, 0, y, bin_img.size().width, 1, GL_RGB,
-	//		GL_UNSIGNED_BYTE, bin_img.data + bin_img.step * y);
-	//}
+	//cout << bin_img.type() << endl;
+	//cout << Big.type() << endl;
+	//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, bin_img.cols, bin_img.rows, 0, GL_RGB, GL_UNSIGNED_BYTE, bin_img.data);
+
+	/*for (int y = 0; y < bin_img.size().height; ++y)
+	{
+		glTexSubImage2D(GL_TEXTURE_2D, 0, 0, y, bin_img.size().width, 1, GL_RGB,
+			GL_UNSIGNED_BYTE, bin_img.data + bin_img.step * y);
+	}
+*/
 
 	cv::flip(Big, Big, 0);
-	for (int y = 0; y < Big.size().height; ++y)
-	{
-		glTexSubImage2D(GL_TEXTURE_2D, 0, 0, y, Big.size().width, 1, GL_RGB,
-			GL_UNSIGNED_BYTE, Big.data + Big.step * y);
-	}
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, Big.cols, Big.rows, 0, GL_RGB, GL_UNSIGNED_BYTE, Big.data);
 
 
 	return;
