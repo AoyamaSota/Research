@@ -1,0 +1,119 @@
+﻿'ConsoleApplication1.exe' (Win32): 'C:\Users\宗太\Desktop\Research\x64\Release\ConsoleApplication1.exe' が読み込まれました。シンボルが読み込まれました。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\ntdll.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\kernel32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\KernelBase.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Users\宗太\Desktop\Research\ConsoleApplication1\PGRFlyCapture.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\msvcp120.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\msvcr120.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\freeglut.dll' が読み込まれました。モジュールがシンボルなしでビルドされました。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\opengl32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\opencv\build\x64\vc12\bin\opencv_core249.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\opencv\build\x64\vc12\bin\opencv_highgui249.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\opencv\build\x64\vc12\bin\opencv_imgproc249.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\opencv\build\x64\vc12\bin\opencv_calib3d249.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\opencv\build\x64\vc12\bin\opencv_video249.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Program Files\Point Grey Research\FlyCapture2\bin64\FlyCapture2_C.dll' が読み込まれました。モジュールがシンボルなしでビルドされました。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\WinSxS\amd64_microsoft.vc80.crt_1fc8b3b9a1e18e3b_8.0.50727.8428_none_88dcdb0b2fb19957\msvcp80.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\WinSxS\amd64_microsoft.vc80.crt_1fc8b3b9a1e18e3b_8.0.50727.8428_none_88dcdb0b2fb19957\msvcr80.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\user32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\gdi32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\advapi32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\winmm.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\msvcrt.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\glu32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\ddraw.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\ole32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\oleaut32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.9600.17810_none_34ae2abd958aedeb\comctl32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\msvfw32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\avifil32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\avicap32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\opencv\build\x64\vc12\bin\opencv_flann249.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\opencv\build\x64\vc12\bin\opencv_features2d249.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Program Files\Point Grey Research\FlyCapture2\bin64\FlyCapture2.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\sechost.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\rpcrt4.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\winmmbase.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\dciman32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\combase.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\shell32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\msacm32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\version.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\ws2_32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\setupapi.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\powrprof.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Program Files\Point Grey Research\FlyCapture2\bin64\libiomp5md.dll' が読み込まれました。モジュールがシンボルなしでビルドされました。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\IPHLPAPI.DLL' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\sspicli.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\cfgmgr32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\devobj.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\shlwapi.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\nsi.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\winnsi.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+初回例外が 0x00007FFBA7AC8A5C (KernelBase.dll) で発生しました (ConsoleApplication1.exe 内): 0xA1A01DB1 (パラメーター: 0x00000000100B1786, 0x00000000100AF300, 0x0000000000000000)。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\imm32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\msctf.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+スレッド 0x1a14 はコード 0 (0x0) で終了しました。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\wintrust.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\crypt32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\msasn1.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\devrtl.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+スレッド 0x1668 はコード 0 (0x0) で終了しました。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\drvstore.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\SPInf.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+スレッド 0x9c0 はコード 0 (0x0) で終了しました。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\uxtheme.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Program Files (x86)\TeamViewer\tv_x64.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\dwmapi.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\SHCore.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\nvoglv64.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\wtsapi32.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\ntmarta.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\winsta.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+スレッド 0x430 はコード 0 (0x0) で終了しました。
+スレッド 0x1670 はコード 0 (0x0) で終了しました。
+スレッド 0x1138 はコード 0 (0x0) で終了しました。
+スレッド 0xd8c はコード 0 (0x0) で終了しました。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\kernel.appcore.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\cryptbase.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\bcryptprimitives.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\clbcatq.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\IME\IMEJP\IMJPTIP.DLL' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\oleacc.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\propsys.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\profapi.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\IME\IMEJP\IMJPAPI.DLL' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\IME\SHARED\IMJKAPI.DLL' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\IME\IMEJP\IMJPPRED.DLL' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\IME\SHARED\IMETIP.DLL' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\dui70.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\IME\SHARED\imecfm.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\wer.dll' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+'ConsoleApplication1.exe' (Win32): 'C:\Windows\System32\IME\SHARED\IMESEARCHDLL.DLL' が読み込まれました。PDB ファイルを開けないか、ファイルが見つかりません。
+スレッド 0x57c はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x16e4 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x12d8 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0xf50 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0xebc はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0xc70 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x18fc はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0xbe8 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x183c はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0xf10 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x1878 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x19d0 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x4a0 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x18b0 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x1af8 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x44c はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x720 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0xdc0 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0xf38 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x174c はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x196c はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0xea4 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x1b9c はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0x1364 はコード -1073741510 (0xc000013a) で終了しました。
+スレッド 0xd00 はコード -1073741510 (0xc000013a) で終了しました。
+初回例外が 0x00007FFBA7AC8A5C (KernelBase.dll) で発生しました (ConsoleApplication1.exe 内): 0xA1A01DB2 (パラメーター: 0x00000000100B1786, 0x00000000100AF300, 0x0000000000000000)。
+プログラム '[6996] ConsoleApplication1.exe' はコード -1073741510 (0xc000013a) で終了しました。
