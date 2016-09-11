@@ -158,13 +158,13 @@ void init(void)
 	pattern = cv::imread("sampleDot.jpg", 1);
 	if (pattern.empty()) return;
 
-	printf("condition is 1 or 2 or 3 ");
+	/*printf("condition is 1 or 2 or 3 ");
 	scanf("%d", &condition);
 	dst_img = background.clone();
 	src_img = pattern.clone();
 	projection = background.clone();
 	startTime = GetTickCount();
-
+*/
 }
 
 static void getTexture(void){
@@ -180,8 +180,7 @@ static void getTexture(void){
 		return;
 	}
 
-	cv::threshold(gray_img, bin_img, 130, 255, cv::THRESH_BINARY);
-	cv::imshow("Binary", bin_img);
+	cv::threshold(gray_img, bin_img, 150, 255, cv::THRESH_BINARY);
 
 	//収縮処理 (ドットが端に投影されないように)
 	cv::erode(bin_img, bin_img, cv::Mat(), cv::Point(-1, -1), 1);
@@ -191,6 +190,8 @@ static void getTexture(void){
 	//メディアンフィルタ (ノイズ除去)
 	cv::medianBlur(bin_img, bin_img, 3);
 	//cv::imshow("Median", bin_img);
+
+	cv::imshow("Binary", bin_img);
 
 	//二値画像の重心を求める		
 	moment = cv::moments(bin_img, 0);
@@ -207,7 +208,7 @@ static void getTexture(void){
 	//線形補間
 	tnkpoint.erase(tnkpoint.begin());
 
-	tnkpoint.push_back((center[1] - center[0]) * 3); //差分の計算と定数倍
+	tnkpoint.push_back((center[1] - center[0]) * 5); //差分の計算と定数倍
 
 
 	//平滑化
@@ -222,7 +223,8 @@ static void getTexture(void){
 	//cv::imshow("tnk", bin_img);
 
 	cv::circle(Big, tmppoint + center[1], 20, CV_RGB(255, 255, 255), -1);
-	cv::circle(bin_img, center[1], 20, CV_RGB(255, 255, 255), -1);
+	/*cv::circle(bin_img, tmppoint + center[1], 20, cv::Scalar(0, 0, 0), -1);
+	cv::imshow("aaa", bin_img);*/
 
 	
 	//cout << Big.size() << endl;
